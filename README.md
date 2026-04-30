@@ -102,5 +102,4 @@ deep-research-agent/
 ├── main.py               # FastAPI app
 ├── requirements.txt
 ├── .env.example
-└── CLAUDE.md             # Claude Code project instructions
 ```
