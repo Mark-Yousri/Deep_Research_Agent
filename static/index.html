@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deep Research Agent</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Deep <span>Research</span> Agent</h1>
+      <p>Multi-agent AI pipeline · Parallel web search · Synthesized cited reports</p>
+    </header>
+
+    <div class="input-card">
+      <label for="question">Research Question</label>
+      <textarea
+        id="question"
+        placeholder="Ask a complex research question… e.g. What are the long-term economic impacts of universal basic income?"
+        rows="3"
+      ></textarea>
+
+      <div class="examples">
+        <button class="example-btn" data-query="What are the environmental impacts of lithium mining for EV batteries?">
+          EV battery mining impacts
+        </button>
+        <button class="example-btn" data-query="How does transformer architecture enable large language models?">
+          Transformer architecture in LLMs
+        </button>
+        <button class="example-btn" data-query="What is the current state of nuclear fusion energy development?">
+          Nuclear fusion progress
+        </button>
+        <button class="example-btn" data-query="How are CRISPR gene editing therapies being used to treat genetic diseases in 2024?">
+          CRISPR gene therapies 2024
+        </button>
+      </div>
+
+      <div class="btn-row">
+        <span class="hint">Ctrl+Enter to submit</span>
+        <button id="submit-btn">Research</button>
+      </div>
+    </div>
+
+    <!-- Pipeline steps -->
+    <div id="pipeline">
+      <h3>Pipeline</h3>
+      <div id="steps"></div>
+    </div>
+
+    <!-- Report output -->
+    <div id="report-section">
+      <div class="report-header">
+        <h2>Research Report</h2>
+        <button id="copy-btn">Copy report</button>
+      </div>
+      <div id="report-output"></div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script>
+    // Configure marked
+    marked.setOptions({ breaks: true, gfm: true });
+  </script>
+  <script src="/static/app.js"></script>
+</body>
+</html>
